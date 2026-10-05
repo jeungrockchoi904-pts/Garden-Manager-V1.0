@@ -1,4 +1,4 @@
-const CACHE_NAME = 'garden-manager-v1.1.3-render-complete-r1';
+const CACHE_NAME = 'garden-manager-v1.1.4-dim-save-r1';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './garden-reference.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting()));

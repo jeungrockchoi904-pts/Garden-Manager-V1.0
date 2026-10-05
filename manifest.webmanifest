@@ -2,7 +2,7 @@
   "id": "./",
   "name": "Garden Manager",
   "short_name": "Garden",
-  "description": "Garden Manager V1.1.3: Visual Garden, sửa render đầy đủ và phương hướng chính xác.",
+  "description": "Garden Manager V1.1.4: sửa lưu dữ liệu, bổ sung kích thước phủ bì/lòng chậu, tỷ lệ đất lấp đầy và tính đất chính xác hơn.",
   "lang": "vi-VN",
   "start_url": "./",
   "scope": "./",
