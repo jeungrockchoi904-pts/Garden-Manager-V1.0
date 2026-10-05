@@ -1,52 +1,78 @@
-# Garden Manager V1.0 — bản tối ưu điện thoại + bản đồ kéo thả
+# Garden Manager V1.0.1 — Mobile UI Test
 
-Bản này vẫn giữ **dữ liệu V1.0** và cùng khóa lưu `garden-manager-v1.0`, nên nếu anh cập nhật trên **đúng URL GitHub Pages cũ**, dữ liệu đang có trên điện thoại/trình duyệt vẫn được đọc lại bình thường.
+Bản thử nghiệm này ưu tiên **sửa giao diện điện thoại trước**, đồng thời vẫn giữ nguyên **schema dữ liệu V1.0** và khóa localStorage `garden-manager-v1.0`. Vì vậy nếu cập nhật trên đúng URL GitHub Pages cũ, dữ liệu V1 đang có vẫn được đọc lại.
 
-## Điểm thay đổi chính
+## Thay đổi giao diện chính
 
-- Giao diện co gọn hơn trên điện thoại, hạn chế tràn ngang toàn trang.
-- Module **Bản đồ** được thiết kế lại theo hướng bố trí trực quan.
-- Có nút **Bố trí ngang** để dùng gần toàn màn hình khi xoay điện thoại ngang.
-- Hướng bản đồ giống sơ đồ gốc: **0 m nằm bên phải**, số mét tăng dần về bên trái.
-- Chia vườn dài 125 m thành các khung 5 m / 10 m / 15 m để thao tác dễ trên điện thoại.
-- Block đã đặt có thể **chạm giữ và kéo trực tiếp**; thả ra là lưu vị trí.
-- Có thể chọn bước căn khi kéo: 1 cm / 5 cm / 10 cm.
-- Chậu tròn chỉ cần nhập **đường kính**.
-- Chậu vuông chỉ cần nhập **cạnh**.
-- Luống/chậu chữ nhật nhập **dài × rộng**.
-- Mọi tọa độ X/Y đều được quy ước tại **tâm vật thể**. Không dùng góc chậu làm mốc.
-- Tọa độ số được đưa vào mục **Nâng cao**, không bắt buộc khi bố trí bằng kéo thả.
-- Block mới có thể tự đặt vào đoạn vườn đang xem; nếu chưa có chỗ thì nằm trong khay **Chưa đặt**.
-- Ảnh sơ đồ vườn gốc được giữ trong app ở mục **Ảnh sơ đồ vườn gốc để đối chiếu**.
-- Các “nhóm tham chiếu” từ ảnh cũ không còn bị tính như block thực tế trên Tổng quan/Bản đồ.
+- Header mới: **menu trái → Garden Manager căn giữa → chuông thông báo**.
+- Bỏ kích thước vườn khỏi header và bỏ nút `+ Thêm mới` ở header.
+- Thanh dưới điện thoại có đúng 5 module, tự fit ngang màn hình:
+  1. Tổng quan
+  2. Sơ đồ
+  3. Cây trồng
+  4. Nhật ký
+  5. Lịch
+- **Cài đặt / Sao lưu & Khôi phục / Cơ sở dữ liệu** được chuyển vào menu trái.
+- Menu trái có thêm nhóm **Thông tin & Hướng dẫn**:
+  - Trồng · chăm sóc · thu hoạch theo cây
+  - Hướng dẫn phân bón
+  - Hướng dẫn thuốc BVTV
+  - Nấm bệnh thông dụng
 
-## Quy ước tọa độ
+## Tổng quan
 
-- **X tâm**: khoảng cách từ mốc **0 m** ở mép phải sơ đồ, chạy dọc theo chiều dài 125 m.
-- **Y tâm**: khoảng cách từ mép trên của bản đồ xuống theo chiều rộng 5 m.
-- Chậu tròn Ø50 cm: nếu tâm X = 1 cm thì chậu sẽ vượt biên vì bán kính là 25 cm. Tâm phải cách mép tối thiểu 25 cm. Bản mới báo rõ lý do này thay vì chỉ báo “vượt ranh giới”.
+- Chạm thẻ diện tích để sửa ngay tên và kích thước vườn.
+- Chạm thẻ Block hoặc Chưa đặt để chuyển sang Sơ đồ.
+- Chạm từng Khu để sửa tên, mốc bắt đầu và kích thước khu.
 
-## Cập nhật lên GitHub Pages cũ
+## Sơ đồ
 
-1. Trong repository Garden đang dùng, sao lưu dữ liệu JSON từ app hiện tại trước.
-2. Thay toàn bộ các file ở root bằng nội dung của gói này.
-3. Commit/push lên nhánh đang dùng cho GitHub Pages.
-4. Mở URL app bằng Chrome/Safari khi có mạng và tải lại một lần.
-5. Service worker của gói này dùng cache mới nên sẽ thay bộ nhớ offline cũ sau khi kích hoạt.
+- Đổi tên `Bản đồ` thành **Sơ đồ**.
+- Mặc định khung **5 m × 5 m**.
+- Có thể chọn:
+  - Khung 5 × 5 m
+  - Toàn bộ vườn
+  - Từng Khu đã nhập đủ mốc bắt đầu + dài + rộng
+- Block dùng viền mảnh và nền nhạt hơn.
+- Có thể chọn hiển thị **Tên cây** hoặc **Mã block**.
+- Nếu block đã trồng cây, ưu tiên hiện tên cụ thể như `Đu đủ` thay vì nhóm `Cây ăn quả`.
+- Chạm block có cây → hiện bảng thông tin nhanh.
+- Chạm block trống → mở ngay form thêm cây vào block đó.
+- Giữ và kéo block để thay đổi vị trí.
 
-Không đổi URL GitHub Pages nếu muốn tiếp tục dùng dữ liệu localStorage hiện tại trên cùng thiết bị/trình duyệt.
+## Cây trồng
 
-## Cài mới
+- Form thêm/sửa cây có ô **tìm kiếm loại cây/giống**.
+- Chỉ giữ hai mốc ngày chính: **Ngày gieo** và **Ngày trồng**.
+- Có nút **Xóa** để đưa ngày về trống.
+- Bỏ nhập khoảng ngày, tháng/năm riêng và tuổi ước tính thủ công.
+- Tuổi cây được tự tính từ ngày trồng; nếu chưa có ngày trồng thì dùng ngày gieo.
 
-- Android: mở URL GitHub Pages bằng Chrome → **Cài app / Thêm vào màn hình chính**.
-- iPhone: Safari → **Chia sẻ → Thêm vào Màn hình chính**.
-- App chạy tĩnh, không cần npm, server riêng hay API key.
+## Lịch
+
+- Module Lịch mới thay vị trí Cài đặt ở thanh dưới.
+- Chọn xem **Tuần / Tháng**.
+- Chạm vào một ngày để thêm công việc/hoạt động cho ngày đó.
+- Các hoạt động tương lai được xem là việc phải làm; hoạt động quá khứ là việc đã làm.
+- Chuông trên header hiển thị số công việc trong 7 ngày tới.
+
+## Hướng dẫn cập nhật
+
+1. Trong app hiện tại, tải một bản sao lưu JSON.
+2. Giải nén gói này.
+3. Thay toàn bộ file ở root của repository GitHub Pages hiện tại bằng các file trong gói.
+4. Commit/push.
+5. Mở lại URL Garden khi có mạng và refresh một lần.
+6. Nếu app cài trên màn hình chính vẫn giữ giao diện cũ, đóng hẳn app rồi mở lại sau khi trang web đã cập nhật.
+
+Không đổi URL GitHub Pages nếu muốn tiếp tục dùng vùng localStorage hiện tại.
 
 ## File trong gói
 
-- `index.html` — ứng dụng V1.0 đã chỉnh.
-- `manifest.webmanifest` — cho phép xoay ngang/dọc (`orientation: any`).
-- `service-worker.js` — cache offline mới.
-- `garden-reference.png` — ảnh sơ đồ vườn anh cung cấp.
-- `icon-192.png`, `icon-512.png` — icon app.
-- `.nojekyll` — dùng cho GitHub Pages.
+- `index.html`
+- `manifest.webmanifest`
+- `service-worker.js`
+- `garden-reference.png`
+- `icon-192.png`
+- `icon-512.png`
+- `.nojekyll`

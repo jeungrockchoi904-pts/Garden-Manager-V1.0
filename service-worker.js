@@ -1,4 +1,4 @@
-const CACHE_NAME = 'garden-manager-v1.0-mobile-map-r2';
+const CACHE_NAME = 'garden-manager-v1.0.1-mobile-ui-r1';
 const ASSETS = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './garden-reference.png'];
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS)).then(() => self.skipWaiting()));
