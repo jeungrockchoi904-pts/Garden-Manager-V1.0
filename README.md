@@ -1,42 +1,52 @@
-# Garden Manager V1.0 — GitHub Pages / PWA
+# Garden Manager V1.0 — bản tối ưu điện thoại + bản đồ kéo thả
 
-Ứng dụng quản lý vườn chạy dạng web tĩnh, không cần npm, server riêng hay API key. Sau khi đưa lên GitHub Pages, có thể cài trên điện thoại như ứng dụng và dùng lại khi offline.
+Bản này vẫn giữ **dữ liệu V1.0** và cùng khóa lưu `garden-manager-v1.0`, nên nếu anh cập nhật trên **đúng URL GitHub Pages cũ**, dữ liệu đang có trên điện thoại/trình duyệt vẫn được đọc lại bình thường.
 
-## Đưa lên GitHub Pages
+## Điểm thay đổi chính
 
-1. Tạo repository mới trên GitHub, ví dụ `garden-manager`.
-2. Giải nén gói này, đưa **toàn bộ nội dung bên trong thư mục** vào thư mục gốc của repository. `index.html` phải nằm ngay ở thư mục gốc.
-3. Commit và push lên nhánh `main`.
-4. Vào **Settings → Pages**; chọn **Deploy from a branch → main → /(root) → Save**.
-5. Mở URL GitHub Pages được cấp. GitHub Pages chạy qua HTTPS; đợi biểu tượng lá xanh tải xong lần đầu để ứng dụng lưu bộ đệm offline.
+- Giao diện co gọn hơn trên điện thoại, hạn chế tràn ngang toàn trang.
+- Module **Bản đồ** được thiết kế lại theo hướng bố trí trực quan.
+- Có nút **Bố trí ngang** để dùng gần toàn màn hình khi xoay điện thoại ngang.
+- Hướng bản đồ giống sơ đồ gốc: **0 m nằm bên phải**, số mét tăng dần về bên trái.
+- Chia vườn dài 125 m thành các khung 5 m / 10 m / 15 m để thao tác dễ trên điện thoại.
+- Block đã đặt có thể **chạm giữ và kéo trực tiếp**; thả ra là lưu vị trí.
+- Có thể chọn bước căn khi kéo: 1 cm / 5 cm / 10 cm.
+- Chậu tròn chỉ cần nhập **đường kính**.
+- Chậu vuông chỉ cần nhập **cạnh**.
+- Luống/chậu chữ nhật nhập **dài × rộng**.
+- Mọi tọa độ X/Y đều được quy ước tại **tâm vật thể**. Không dùng góc chậu làm mốc.
+- Tọa độ số được đưa vào mục **Nâng cao**, không bắt buộc khi bố trí bằng kéo thả.
+- Block mới có thể tự đặt vào đoạn vườn đang xem; nếu chưa có chỗ thì nằm trong khay **Chưa đặt**.
+- Ảnh sơ đồ vườn gốc được giữ trong app ở mục **Ảnh sơ đồ vườn gốc để đối chiếu**.
+- Các “nhóm tham chiếu” từ ảnh cũ không còn bị tính như block thực tế trên Tổng quan/Bản đồ.
 
-Không cần chạy lệnh build. GitHub Pages phục vụ trực tiếp `index.html` và các tệp PWA đi kèm.
+## Quy ước tọa độ
 
-## Cài trên Android
+- **X tâm**: khoảng cách từ mốc **0 m** ở mép phải sơ đồ, chạy dọc theo chiều dài 125 m.
+- **Y tâm**: khoảng cách từ mép trên của bản đồ xuống theo chiều rộng 5 m.
+- Chậu tròn Ø50 cm: nếu tâm X = 1 cm thì chậu sẽ vượt biên vì bán kính là 25 cm. Tâm phải cách mép tối thiểu 25 cm. Bản mới báo rõ lý do này thay vì chỉ báo “vượt ranh giới”.
 
-Mở URL GitHub Pages bằng Chrome trên điện thoại, chọn **Cài app** trong ứng dụng hoặc menu Chrome **⋮ → Cài đặt ứng dụng / Thêm vào màn hình chính**. Sau khi cài, mở Garden từ biểu tượng mới tạo. Mở ứng dụng trực tuyến một lần để tải bộ nhớ offline.
+## Cập nhật lên GitHub Pages cũ
 
-## Cài trên iPhone
+1. Trong repository Garden đang dùng, sao lưu dữ liệu JSON từ app hiện tại trước.
+2. Thay toàn bộ các file ở root bằng nội dung của gói này.
+3. Commit/push lên nhánh đang dùng cho GitHub Pages.
+4. Mở URL app bằng Chrome/Safari khi có mạng và tải lại một lần.
+5. Service worker của gói này dùng cache mới nên sẽ thay bộ nhớ offline cũ sau khi kích hoạt.
 
-Mở URL bằng Safari → **Chia sẻ → Thêm vào Màn hình chính**. iOS có thể không hiển thị nút cài trong trang; dùng menu Chia sẻ của Safari.
+Không đổi URL GitHub Pages nếu muốn tiếp tục dùng dữ liệu localStorage hiện tại trên cùng thiết bị/trình duyệt.
 
-## Lưu ý dữ liệu
+## Cài mới
 
-- Dữ liệu được lưu trên thiết bị/trình duyệt nơi anh nhập; hiện V1.0 chưa đồng bộ giữa nhiều thiết bị.
-- Dùng **Sao lưu** trong ứng dụng để tải JSON định kỳ. Trước khi xóa dữ liệu trình duyệt hoặc chuyển điện thoại, hãy sao lưu và khôi phục JSON.
-- Giữ nguyên URL GitHub Pages để ứng dụng dùng cùng vùng lưu dữ liệu trên điện thoại.
-- Mã HTML đã nhúng ảnh sơ đồ tham chiếu. Các nhóm trên sơ đồ chưa được coi là từng chậu/luống đã đo; tọa độ vẫn cần nhập thực tế.
+- Android: mở URL GitHub Pages bằng Chrome → **Cài app / Thêm vào màn hình chính**.
+- iPhone: Safari → **Chia sẻ → Thêm vào Màn hình chính**.
+- App chạy tĩnh, không cần npm, server riêng hay API key.
 
-## Quy ước cập nhật phiên bản
+## File trong gói
 
-- Các bản sửa giao diện, sửa lỗi hoặc điều chỉnh nhỏ thuộc nhánh **V1**: thay `index.html`, giữ nguyên URL GitHub Pages. Mở ứng dụng khi có mạng một lần để tải bản mới; sau đó bản mới cũng được lưu để dùng offline.
-- Các thay đổi lớn về chức năng bắt đầu ở **V2**, đóng gói thành bộ source mới và nâng số phiên bản rõ ràng.
-- Trước mỗi lần cập nhật hoặc cài lại, tải bản sao lưu JSON từ ứng dụng.
-
-## Nội dung gói
-
-- `index.html` — ứng dụng Garden Manager V1.0.
-- `manifest.webmanifest` — tên, biểu tượng và chế độ cài đặt PWA.
-- `service-worker.js` — bộ nhớ đệm để mở ứng dụng offline sau lần tải đầu.
-- `icon-192.png`, `icon-512.png` — biểu tượng Android/PWA.
-- `.nojekyll` — bảo đảm GitHub Pages phục vụ nguyên các tệp tĩnh.
+- `index.html` — ứng dụng V1.0 đã chỉnh.
+- `manifest.webmanifest` — cho phép xoay ngang/dọc (`orientation: any`).
+- `service-worker.js` — cache offline mới.
+- `garden-reference.png` — ảnh sơ đồ vườn anh cung cấp.
+- `icon-192.png`, `icon-512.png` — icon app.
+- `.nojekyll` — dùng cho GitHub Pages.
