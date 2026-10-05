@@ -1,17 +1,19 @@
-# Garden Manager V1.1.5 — Visual Garden · Full Audit Fix
+# Garden Manager V1.1.6 — Fill Input Fix
 
-Bản kiểm tra lại toàn bộ sau khi phát hiện repository GitHub đang chứa file trộn giữa V1.1.2 và V1.1.4.
+Patch nhỏ từ V1.1.5.
 
-## Sửa chính
-- Đồng bộ `index.html`, `manifest.webmanifest`, `service-worker.js`, README về cùng V1.1.5.
-- Tách lỗi ghi Local Storage khỏi lỗi render: lỗi giao diện không còn bị báo nhầm là lỗi lưu dữ liệu.
-- Các form chính chỉ đóng sau khi ghi dữ liệu thành công; rollback khi lưu thất bại.
-- Thay `structuredClone` bằng clone JSON tương thích rộng hơn cho dữ liệu app.
-- Giữ đường kính/kích thước phủ bì và lòng chậu, chiều sâu lòng chậu, tỷ lệ đất lấp đầy, tính thể tích đất và gợi ý độ sâu.
-- Giữ quy ước: **0 m = Tây / bên phải → 125 m = Đông / bên trái; Bắc hướng xuống dưới**.
-- Service Worker dùng cache mới, điều hướng ưu tiên lấy bản mạng mới để tránh kẹt `index.html` cũ.
+## Sửa lỗi
+- Ô **Tỷ lệ đất lấp đầy (%)** cho phép xóa toàn bộ giá trị để nhập lại trên điện thoại.
+- Khi đang nhập, app không ép ngay về 10 hoặc 100.
+- Chỉ khi rời ô / xác nhận / lưu, giá trị mới được giới hạn trong khoảng **10–100%**.
+- Thanh kéo và ô nhập số tiếp tục đồng bộ sau khi giá trị hợp lệ.
+- Giữ nguyên toàn bộ dữ liệu, giao diện, tọa độ và logic V1.1.5.
 
-## Cập nhật GitHub Pages
-Ghi đè **toàn bộ file root bằng đúng bộ V1.1.5 trong một commit**. Không xóa Local Storage của ứng dụng.
+## Cập nhật GitHub
+Upload đè 4 file này vào root repo hiện tại:
+- `index.html`
+- `service-worker.js`
+- `manifest.webmanifest`
+- `README.md`
 
-Sau deploy, mở URL GitHub Pages với `?v=115` và xác nhận header hiện `V1.1.5 · Visual Garden · Audit Fix`.
+Sau deploy mở `?v=116` để kiểm tra phiên bản.
