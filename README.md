@@ -14,3 +14,9 @@ Nâng cấp trực tiếp từ V1.1.8.
 
 ## Deploy GitHub Pages
 Upload/replace: `index.html`, `manifest.webmanifest`, `service-worker.js`, `icon-192.png`, `icon-512.png`, `garden-reference.png`, `.nojekyll`.
+
+
+## V1.1.9 R2
+- Sơ đồ mặc định mở Quản lý chậu LV1/LV2/LV3.
+- Chạm chậu ở Sơ đồ trực quan mở bottom sheet, không còn thẻ CHẬU ĐANG CHỌN ở cạnh/bên dưới sơ đồ.
+- Có nút chuyển Sơ đồ trực quan / Quản lý chậu.
