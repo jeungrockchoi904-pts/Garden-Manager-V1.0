@@ -1,13 +1,16 @@
-# Garden Manager V1.1.6 — Fill Input Fix
+# Garden Manager V1.1.7 — Zone & 0.5m Fix
 
-Patch nhỏ từ V1.1.5.
+Patch từ V1.1.6.
 
-## Sửa lỗi
-- Ô **Tỷ lệ đất lấp đầy (%)** cho phép xóa toàn bộ giá trị để nhập lại trên điện thoại.
-- Khi đang nhập, app không ép ngay về 10 hoặc 100.
-- Chỉ khi rời ô / xác nhận / lưu, giá trị mới được giới hạn trong khoảng **10–100%**.
-- Thanh kéo và ô nhập số tiếp tục đồng bộ sau khi giá trị hợp lệ.
-- Giữ nguyên toàn bộ dữ liệu, giao diện, tọa độ và logic V1.1.5.
+## Sửa chính
+- Danh sách **Phạm vi Sơ đồ** nay hiển thị đồng bộ với danh sách **Khu vực** ở Tổng quan.
+- Khu đã có kích thước nhưng chưa có **mốc bắt đầu** vẫn xuất hiện trong danh sách, có ghi rõ `thiếu mốc vị trí` và chưa cho chọn để tránh đặt sai tọa độ.
+- Tổng quan phân biệt rõ: **Đã bố trí / Thiếu mốc / Chưa đo**.
+- Sơ đồ hỗ trợ chính xác bước **0,5 m (50 cm)** thay vì làm tròn 1 m.
+- Thanh chọn đoạn chạy theo bước 0,5 m; hai nút dịch chuyển cũng theo 0,5 m.
+- Lưới Sơ đồ có vạch 0,5 m và nhãn 0,5 m; kích thước 4,5 m, 1,5 m... hiển thị nguyên giá trị, không làm tròn.
+- Giữ nguyên quy ước phương hướng: **0 m = Tây / bên phải → 125 m = Đông / bên trái; Bắc hướng xuống**.
+- Giữ nguyên sửa nhập **Tỷ lệ đất lấp đầy** của V1.1.6.
 
 ## Cập nhật GitHub
 Upload đè 4 file này vào root repo hiện tại:
@@ -16,4 +19,4 @@ Upload đè 4 file này vào root repo hiện tại:
 - `manifest.webmanifest`
 - `README.md`
 
-Sau deploy mở `?v=116` để kiểm tra phiên bản.
+Sau deploy mở `?v=117` để kiểm tra phiên bản.
