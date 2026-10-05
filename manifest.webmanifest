@@ -2,7 +2,7 @@
   "id": "./",
   "name": "Garden Manager",
   "short_name": "Garden",
-  "description": "Garden Manager V1.1.1: sơ đồ vườn bán thực tế, thư viện chậu, cây trồng, nhật ký và lịch.",
+  "description": "Garden Manager V1.1.2: sơ đồ vườn bán thực tế, thư viện chậu, cây trồng, nhật ký và lịch.",
   "lang": "vi-VN",
   "start_url": "./",
   "scope": "./",
