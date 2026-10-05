@@ -1,0 +1,19 @@
+{
+  "id": "./",
+  "name": "Garden Manager",
+  "short_name": "Garden",
+  "description": "Quản lý sơ đồ vườn, cây trồng và nhật ký chăm sóc.",
+  "lang": "vi-VN",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f3f7f3",
+  "theme_color": "#183b32",
+  "categories": ["lifestyle", "utilities"],
+  "icons": [
+    {"src": "./icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "./icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
