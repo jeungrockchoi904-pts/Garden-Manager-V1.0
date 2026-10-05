@@ -1,20 +1,20 @@
-# Garden Manager V1.1.2 — Visual Garden · Render Fix
+# Garden Manager V1.1.3 — Visual Garden · Render Complete
 
-Bản sửa lỗi trang trắng sau khi nâng cấp từ các bản V1 cũ.
+Bản sửa hoàn chỉnh từ nhánh V1.1.0 đầy đủ chức năng.
 
-## Sửa chính
-- Giữ nguyên khóa dữ liệu `garden-manager-v1.0`; không xóa dữ liệu đang lưu trên thiết bị.
-- Bổ sung lớp tương thích khi dữ liệu V1 cũ thiếu trường/array mới.
-- Có error boundary: nếu dữ liệu cũ gây lỗi render, app hiện nút **Khôi phục hiển thị** thay vì để trống toàn bộ nội dung.
-- Giữ đúng phương hướng: **0 m = Tây / bên phải → 125 m = Đông / bên trái; Bắc hướng xuống**.
-- Service Worker đổi cache sang V1.1.2 để tránh giữ `index.html` cũ.
+## Sửa lỗi chính
+- Khôi phục đầy đủ các module bị thiếu trong V1.1.1/V1.1.2: Tổng quan, Sơ đồ, Cây trồng, Nhật ký, Lịch, Cài đặt, Sao lưu, Cơ sở dữ liệu và 4 mục Hướng dẫn.
+- Sửa lỗi trang trắng do `render()` tham chiếu tới các hàm module đã bị thiếu khỏi source.
+- Giữ giao diện Visual Garden và thư viện chậu/cây của V1.1.0.
+- Quy ước cố định: **0 m = Tây / bên phải → 125 m = Đông / bên trái; Bắc hướng xuống**.
+- Kéo/thả và tọa độ trên Sơ đồ cùng dùng quy ước này.
+- Giữ nguyên khóa dữ liệu `garden-manager-v1.0`; không xóa dữ liệu cũ.
+- Có lớp chuẩn hóa dữ liệu cũ và error boundary.
+- Service Worker dùng cache V1.1.3 mới.
 
 ## Cập nhật GitHub Pages
-1. Không xóa Local Storage / dữ liệu trình duyệt.
-2. Giải nén ZIP.
-3. Upload đè toàn bộ file ở root repo hiện tại.
-4. Commit.
-5. Mở URL GitHub Pages bằng trình duyệt, refresh cứng 1 lần.
-6. Nếu app đã cài trên điện thoại, đóng app rồi mở URL GitHub Pages trước để nhận V1.1.2, sau đó mở lại app.
-
-Nếu vẫn thấy trang trắng, không xóa dữ liệu: V1.1.2 sẽ hiện thẻ lỗi và nút **Khôi phục hiển thị** để chuẩn hóa dữ liệu cũ.
+1. Sao lưu JSON nếu app cũ vẫn mở được trên thiết bị khác.
+2. Upload đè **toàn bộ file bên trong gói này** vào root repo hiện tại.
+3. Commit.
+4. Chờ GitHub Pages deploy xong.
+5. Mở URL Pages với `?v=113` một lần, sau đó reload.
