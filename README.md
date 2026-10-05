@@ -1,18 +1,17 @@
-# Garden Manager V1.1.4 — Dimension & Save Fix
+# Garden Manager V1.1.5 — Visual Garden · Full Audit Fix
 
-Bản nâng cấp từ V1.1.3, giữ nguyên khóa dữ liệu `garden-manager-v1.0`.
+Bản kiểm tra lại toàn bộ sau khi phát hiện repository GitHub đang chứa file trộn giữa V1.1.2 và V1.1.4.
 
 ## Sửa chính
-
-- Sửa luồng **Lưu** khi chỉnh thông tin vườn, khu và chậu; chỉ đóng hộp thoại sau khi dữ liệu lưu thành công.
-- Khi sửa kích thước chậu làm vị trí cũ không còn hợp lệ, app vẫn lưu thông tin và tự đưa chậu về **Chưa đặt** thay vì chặn toàn bộ thao tác lưu.
-- Chậu tròn: nhập **đường kính ngoài/phủ bì** và **đường kính trong/lòng chậu**.
-- Chậu vuông/chữ nhật: nhập **kích thước phủ bì** và **kích thước lòng chậu** riêng.
-- Bổ sung **chiều cao phủ bì**, **chiều sâu lòng chậu** và **tỷ lệ đất lấp đầy (%)**.
-- Thể tích đất được tính từ kích thước lòng chậu + chiều sâu lòng + tỷ lệ lấp đầy + hệ số hình dáng của mẫu chậu.
-- Gợi ý cây dùng **độ sâu đất thực** thay vì chỉ dùng chiều cao chậu ngoài.
-- Giữ đúng phương hướng: **0 m = Tây / bên phải → 125 m = Đông / bên trái; Bắc hướng xuống dưới**.
+- Đồng bộ `index.html`, `manifest.webmanifest`, `service-worker.js`, README về cùng V1.1.5.
+- Tách lỗi ghi Local Storage khỏi lỗi render: lỗi giao diện không còn bị báo nhầm là lỗi lưu dữ liệu.
+- Các form chính chỉ đóng sau khi ghi dữ liệu thành công; rollback khi lưu thất bại.
+- Thay `structuredClone` bằng clone JSON tương thích rộng hơn cho dữ liệu app.
+- Giữ đường kính/kích thước phủ bì và lòng chậu, chiều sâu lòng chậu, tỷ lệ đất lấp đầy, tính thể tích đất và gợi ý độ sâu.
+- Giữ quy ước: **0 m = Tây / bên phải → 125 m = Đông / bên trái; Bắc hướng xuống dưới**.
+- Service Worker dùng cache mới, điều hướng ưu tiên lấy bản mạng mới để tránh kẹt `index.html` cũ.
 
 ## Cập nhật GitHub Pages
+Ghi đè **toàn bộ file root bằng đúng bộ V1.1.5 trong một commit**. Không xóa Local Storage của ứng dụng.
 
-Giải nén ZIP và upload đè toàn bộ file vào root repo hiện tại. Không tạo repo mới. Sau khi GitHub Pages deploy, mở URL với `?v=114` một lần để bỏ cache.
+Sau deploy, mở URL GitHub Pages với `?v=115` và xác nhận header hiện `V1.1.5 · Visual Garden · Audit Fix`.
