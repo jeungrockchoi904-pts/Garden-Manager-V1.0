@@ -1,4 +1,4 @@
-const CACHE_NAME = 'garden-manager-v1.1.8-zone-exact-r1';
+const CACHE_NAME = 'garden-manager-v1.1.9-structured-pot-r1';
 const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './garden-reference.png'];
 
 self.addEventListener('install', event => {
