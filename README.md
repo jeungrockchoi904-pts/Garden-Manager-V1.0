@@ -1,7 +1,9 @@
-# Garden Manager V1.1.9 R5
+# Garden Manager V1.1.9 R6
 
-- Chạm chậu theo vùng thoải mái tính bằng pixel màn hình, ưu tiên chậu gần nhất khi các vùng chạm giao nhau.
-- Chạm và kéo được tách bằng ngưỡng 11 px để giảm mở nhầm/kéo nhầm.
-- Chậu đang chọn có highlight xanh rõ trên sơ đồ.
-- Quản lý chậu dạng cây thu gọn: Khu → Mã chính → Mã phụ; mặc định chỉ hiện Khu.
-- Giữ các thay đổi V1.1.9 R3/R4 và dữ liệu V1.1.8.
+- Chạm 1 lần: chọn + highlight chậu.
+- Nhấn giữ đủ 2 giây: popup tự mở ngay, không cần thả tay.
+- Rê tay: hủy long-press và kéo mượt theo pixel; chỉ snap khi thả.
+- Tab Vị trí: X/Y 1 cm, khóa/mở, focus trên sơ đồ.
+- Đổi nhãn LV2 đồng bộ ngay mã hiển thị trên sơ đồ.
+- Popup con có Quay lại/Đóng để trở về popup chính.
+- Quản lý chậu dạng cây thu gọn Khu → Mã chính → mã phụ.
