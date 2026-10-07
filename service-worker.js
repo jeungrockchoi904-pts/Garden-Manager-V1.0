@@ -1,4 +1,4 @@
-const CACHE_NAME = 'garden-manager-v1.1.9-r6';
+const CACHE_NAME = 'garden-manager-v1.1.9-r7';
 const APP_SHELL = ['./', './index.html', './manifest.webmanifest', './icon-192.png', './icon-512.png', './garden-reference.png'];
 
 self.addEventListener('install', event => {
