@@ -1,16 +1,9 @@
-# Garden Manager V1.1.9 R7
+# Garden Manager V1.1.9 R8
 
-- Chạm 1 lần: chọn + highlight chậu.
-- Nhấn giữ đủ 2 giây: popup tự mở ngay, không cần thả tay.
-- Rê tay: hủy long-press và kéo mượt theo pixel; chỉ snap khi thả.
-- Tab Vị trí: X/Y 1 cm, khóa/mở, focus trên sơ đồ.
-- Đổi nhãn LV2 đồng bộ ngay mã hiển thị trên sơ đồ.
-- Popup con có Quay lại/Đóng để trở về popup chính.
-- Quản lý chậu dạng cây thu gọn Khu → Mã chính → mã phụ.
+Build: **R8 · Plant Visual + 1s Hold + Garden Wall**
 
-
-## V1.1.9 R7
-- Đồng bộ mã chậu hiển thị trong form cây trồng theo mã LV2/LV3 hiện tại.
-- Kiểu trồng: Cây đơn / Theo bụi-khóm; nhãn số lượng đổi theo kiểu trồng.
-- Cây đơn tự phân bổ đều trên mặt chậu; bụi/khóm hiển thị thành cụm nhiều thân/lá.
-- Hỗ trợ nhiều loại cây trong cùng một chậu; sơ đồ hiển thị kết hợp các nhóm cây.
+- Tăng kích thước hiển thị cây/bụi trên mặt chậu; tự co giãn theo số lượng.
+- Nhấn giữ chậu **1 giây** để popup tự mở ngay.
+- Thêm tường gạch trực quan bao quanh ranh giới vườn; không thay đổi tọa độ/diện tích sử dụng.
+- Tiêu đề dưới tên app hiển thị rõ **V1.1.9 R8** để nhận biết build sau mỗi cập nhật.
+- PWA cache nâng lên R8.
