@@ -1,9 +1,8 @@
-# Garden Manager V1.1.9 R8
+# Garden Manager V1.1.9 R9
 
-Build: **R8 · Plant Visual + 1s Hold + Garden Wall**
-
-- Tăng kích thước hiển thị cây/bụi trên mặt chậu; tự co giãn theo số lượng.
-- Nhấn giữ chậu **1 giây** để popup tự mở ngay.
-- Thêm tường gạch trực quan bao quanh ranh giới vườn; không thay đổi tọa độ/diện tích sử dụng.
-- Tiêu đề dưới tên app hiển thị rõ **V1.1.9 R8** để nhận biết build sau mỗi cập nhật.
-- PWA cache nâng lên R8.
+- Tán 1 bụi/khóm phủ gần toàn bộ mặt hữu dụng của chậu.
+- 1 cây đơn/cây ăn quả có tán fit theo lòng chậu; nhiều cây vẫn tự phân bổ đều.
+- Hệ tọa độ người dùng: gốc (0,0) ở góc trên bên phải vườn, phía CTS-01.01.
+- X: từ trên xuống. Y: từ phải sang trái. Tọa độ tính đến tâm chậu.
+- Giữ thao tác nhấn giữ 1 giây để mở popup và kéo mượt.
+- Tiêu đề app hiển thị rõ V1.1.9 R9.
